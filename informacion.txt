@@ -1,0 +1,23 @@
+nombre deL sitio "Compu compras"
+
+
+Cambios: agregre un title descriptivo y breve y descripciones
+en las siguientes paginas: INDEX, NOVEDADES, OFERTAS, VENDER Y NOSOTROS. 
+
+
+Agregue estas keywords:
+
+
+en INDEX:computadoras, laptop, gamer, gabinete, ram,
+ procesador, nootebook, ssd, gamer, envios.
+
+en NOVEDADES: ssd, ram, procesador, Intel, Lenovo, HP, coolers, ventiladores.
+
+en OFERTAS: precio computadora, computadora nueva, compu usadas, memoria, 
+ computadora vieja, computadora barata, accesible, económic.
+
+en VENDER: vender, venta, promocionar, publicar, computadora, nootbook, 
+escritorio, gamer
+
+en NOSOTROS:ayuda, Informacion, nosotros, objetivos, CEO,privacidad, 
+reglamento, chat

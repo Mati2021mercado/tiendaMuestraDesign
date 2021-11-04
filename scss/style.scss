@@ -1,0 +1,639 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Staatliches&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mallanna&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Mina&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Niramit:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sarabun&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Armata&display=swap");
+
+// /////
+//!  IMPORT  SCSS
+@import "vars";
+@import "pageOfertas";
+@import "pageNovedades";
+@import "pageNosotros";
+
+// //////
+
+::-webkit-scrollbar{
+  width: 18px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 25px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2)5;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 25px;
+  background-color: $verdeFluor-2;
+}
+
+body {
+  background-color: #ebebeb;
+  header {
+    background-color: #3dffbc;
+    .header__fixed {
+      background-color: #3dffbc;
+      /* background-color: #1fd294; */
+    }
+  }
+}
+
+input {
+  outline: none;
+  border: none;
+}
+button {
+  border: none;
+}
+//* ARRIBA DEL MENU, DONDE SE ENCUENTRA EL BUSCADOR, EL LOGO Y DEMAS ICONOS*/
+.header__fixed {
+  top: 0;
+  position: fixed;
+  display: flex;
+  height: 70px;
+  width: 100%;
+  text-align: center;
+  z-index: 1000;
+  align-items: center;
+  .header__fixed__contenedor {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: flex-end;
+    .header__fixed__contenedor__logo {
+      img {
+        animation-name: rotationY;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-fill-mode: both;
+        animation-timing-function: cubic-bezier(ease);
+        max-width: 90px;
+        &:hover {
+          transform: scale(1.1);
+          transition: .3s;
+        }
+      }
+    }
+  }
+  .header__fixed__contenedor-icons {
+    display: flex;
+    flex-basis: 25%;
+    justify-content: center;
+    a {
+      color: black;
+      font-size: 43px;
+      padding: 0px 10px;
+      margin: 0px 10px;
+      transition: all 0.4s;
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+  .header__fixed__searcher {
+    flex-basis: 75%;
+    height: 40px;
+    min-width: 100px;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 30px;
+    margin-right: 15px;
+    input {
+      font-family: "Mallanna", sans-serif;
+      font-size: 1.2rem;
+      height: 40px;
+      width: 450px;
+      border-radius: 1px;
+      border: 0;
+      box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+      &:focus {
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+    .header__fixed__searcher__icon {
+      color: rgb(82, 81, 81);
+      font-size: 2.2rem;
+      margin-left: -40px;
+      margin-top: -3px;
+    }
+  }
+}
+
+nav {
+  text-align: center;
+  margin-top: 70px;
+}
+//* CHECKBON ES EL ICONO DE BARRAS QUE NO SE MOSTRARA HASTA QUE ESTE NO ESTE EN MOBILE */
+.checkbtn {
+  font-size: 30px;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+  display: none;
+}
+
+//* CADA VEZ QUE PRESIONE EL ICONO DE BARRAS EL MENU SE MOSTRARA O NO */
+
+#check {
+  display: none;
+  &:checked ~ .list .list__item .navbar__title,
+  &:checked ~ .list .list__item__modal .btnRegistrarse{
+    display: none;
+  }
+}
+
+//* ESTA LISTA SON LOS TITULOS QUE PODEMOS OBSERVAR EN EL NAV */
+
+.list {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  
+  //* ESTE ITEM ES EL BOTON DE REGISTRARSE QUE CONTIENE UN MODAL DENTRO*/
+  .list__item__modal {
+    .list__item__modal__contenedor {
+      z-index: 1200;
+      .list__item__modal__contenedor__content {
+        background-color: #000;
+        color: #3dffbc;
+        text-align: start;
+        .modal__contenedor__content__header {
+          padding-bottom: 0;
+          border: none;
+          .modal__contenedor__content__header__title {
+            color: #3dffbc;
+          }
+        }
+        .modal__contenedor__content__footer {
+          padding-top: 0;
+          border: none;
+          .btn.btn-primary {
+            color: #000;
+            background-color: #3dffbc;
+            border: none;
+            &:hover {
+              color: #fff;
+            }
+            &:focus {
+              outline: none;
+              outline-width: 0;
+              box-shadow: none;
+              -moz-box-shadow: none;
+              -webkit-box-shadow: none;
+              border: none;
+            }
+          }
+        }
+        .modal__contenedor__content__body {
+          padding-top: 0;
+          padding-bottom: 0;
+
+          .modal__contenedor__content__body {
+            padding: 40px 10px;
+            color: #fff;
+            margin: auto;
+            label{
+              color: #3dffbc;
+            }
+            .modal__contenedor__content__body__form-control {
+              background-color: transparent;
+              border: none;
+              border-bottom: 1px solid #3dffbc;
+              &:focus {
+                transition-property: background;
+                transition-duration: 0.5s;
+                outline: none;
+                outline-width: 0;
+                box-shadow: none;
+                -moz-box-shadow: none;
+                -webkit-box-shadow: none;
+                background-color: #3dffbc;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //* ESTOS SON LOS ITEM NORMALES */
+  .list__item {
+    display: inline-block;
+    position: relative;
+    padding: 10px 15px;
+    &:hover {
+      a {
+        i {
+          opacity: 0.5;
+        }
+      }
+      .navbar__title {
+        opacity: 0.5;
+      }
+      //* ESTE ES UN ITEM DENTRO DEL TITULO "+ MAS" */
+      .list--second {
+        display: block;
+        padding: 15px 0px;
+        width: 200px;
+        background-color: #333;
+        position: absolute;
+        border-bottom-left-radius: 2px;
+        border-bottom-right-radius: 2px;  
+        text-align: start;
+        li {
+          a {
+            display: block;
+            padding-left: 25px;
+            color: #fff;
+            font-family: "Niramit", sans-serif;
+            font-weight: 100;
+            letter-spacing: 1px;
+            &:hover{
+              background-color: #3483fa;
+            }
+          }
+        }
+      }
+    }//* (TITULOS) a y boton regristrarse */
+    a {
+      color: rgb(0, 0, 0);
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      letter-spacing: 2px;
+    }
+    button {
+      background-color: rgb(0, 0, 0);
+      color: #3dffbc;
+      font-size: 1.1rem;
+      text-decoration: none;
+      font-family: "Barlow", sans-serif;
+      font-weight: 600;
+      margin-bottom: 3px;
+      letter-spacing: 2px;
+      &:hover {
+        color: #3dffbc;
+      }
+      &:focus {
+        outline: none;
+        outline-width: 0;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        border: none;
+      }
+    }
+    
+  }
+}
+//*TITULO AL FINAL DEL HEADER*/
+.header__title {
+  padding: 6px 0px;
+  text-align: center;
+  color: $blanco;
+  font-family: "Armata", sans-serif;
+  text-align: center;
+  word-spacing: 4px;
+  font-size: 18px;
+  background-color: $fondoNegro;
+}
+
+//* FONDO AL MAIN DE LA PAGINA PRINCIPAL */
+
+.pageIndex {
+  background-image: url("https://job-wizards.com/es/wp-content/uploads/2018/05/img_ws_coworking_kw18_2.jpg");
+  background-attachment: fixed;
+}
+
+main {
+  background-color: rgb(134, 158, 158);
+  padding-bottom: 2rem;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 230px;
+  //* OFERTAS EN NOTICIAS DENTRO DE UN "CARRUSEL"*/
+  .carousel{
+   .carousel-inner{
+    .carousel-item {
+      img {
+        min-height: 175px;
+        object-fit: cover;
+      }
+    }
+   } 
+  }
+  //* CONTENEDOR FLEXIBLE Y RESPONSIVO CON GRID */
+  .contenedor__grid{
+    margin: 20px 20px;
+    .contenedor__grid__producto{
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-auto-rows: 301px;
+      gap: 10px;
+      //* PRODUCTO INDIVIDUAL */
+      .main__producto {
+        position: relative;
+        text-align: start;
+        background-color: #fff;
+        border-bottom-right-radius: 1rem;
+        border-top-left-radius: 1rem;
+        box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+        &:hover {
+          border-bottom-right-radius: 0;
+          transition: 0.5s;
+          img {
+            opacity: 0.65;
+            transition: 0.2s;
+            transition-delay: 0.3s;
+          }
+          .main__producto__informacion {
+            border-bottom-right-radius: 1rem;
+            box-shadow: 0px 3px 2px 2px rgba(0, 0, 0, 0.2);
+            z-index: 150;
+            transition: 0.5s;
+            transition-delay: 0.3s;
+            margin-top: 301px;
+          }
+        }
+        .main__producto__informacion {
+          color: rgb(0, 0, 0);
+          background-color: rgb(255, 255, 255);
+          padding: 10px 20px;
+          font-family: "Mulish", sans-serif;
+          margin-bottom: 40px;
+          position: absolute;
+          height: 225px;
+          line-height: normal;
+          font-size: 0.9rem;
+          top: 0;
+          margin-top: 40px;
+          h6 {
+            text-align: center;
+            font-size: 1.7rem;
+            border-bottom: 1px solid black;
+            padding: 0;
+            margin: 0;
+          }
+          .main__producto__informacion__titulo {
+            font-size: 1.1rem;
+            margin: 0;
+            padding: 0;
+          }
+          .main__producto__informacion__caracteristicas {
+            list-style: none;
+            font-size: 0.85rem;
+            line-height: normal;
+            margin: 0;
+            padding: 0;
+            font-weight: bold;
+            
+          }
+          .main__producto__informacion__texto{
+            font-style: italic;
+            font-size: 1rem;
+          }
+        }
+        .main__producto__botones {
+          width: 100%;
+          height: 45px;
+          border: none;
+          display: flex;
+          justify-content: end;
+          position: relative;
+          z-index: 100;
+          .main__producto__botones__comprar,
+          .main__producto__botones__carrito {
+            @extend %btn;
+            border-radius: 4px;
+            height: 40px;
+            display: inline-block;
+          }
+          .main__producto__botones__comprar {
+            width: 80px;
+            &:active {
+              box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            }
+          }
+          .main__producto__botones__carrito {
+            margin-left: 5px;
+            font-size: 1.8rem;
+            width: 60px;
+            border-top-right-radius: 0%;
+            &:active {
+              box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2);
+            }
+          }
+        }
+        .main__producto__img {
+          height: 217.5px;
+          background-color: #fff;
+          position: relative;
+          z-index: 50;
+        }
+        img {
+          height: 217.5px;
+          object-fit: cover;
+        }
+        .main__producto__bitcoin {
+          background-color: rgb(4, 4, 4);
+          border-top-right-radius: 4px;
+          border-bottom-right-radius: 4px;
+          height: 35px;
+          width: 120px;
+          color: $verdeFluor-2;
+          position: relative;
+          z-index: 200;
+          .main__producto__bitcoin__icono {
+            font-size: 1.7rem;
+            padding-top: 4px;
+            padding-left: 9px;
+            height: 100%;
+            width: 35px;
+            display: inline-block;
+          }
+          .main__producto__bitcoin__precio {
+            font-family: "ABeeZee", sans-serif;
+            margin-top: 7.5px;
+            display: inline-block;
+            position: static;
+            position: absolute;
+            display: inline-block;
+            font-size: 1.2rem;
+          }
+        }
+        
+      }
+    }    
+  }
+}
+
+//* ESTOS CHECKBOX PERMITEN (CUANDO APARECEN EN MOBILE) QUE LA INFORMACION SE MUESTRE AL TOCARLO (CHEACKEAR) QUIZA SEA MALA PRACTICA IMPLEMENTAR UNO POR CADA PRODUCTO PERO CON JAVASCRIPT SERA MAS FACIL*/
+
+#checkp1,
+#checkp2,
+#checkp3,
+#checkp4,
+#checkp5,
+#checkp6,
+#checkp7,
+#checkp8 {
+  display: none;
+}
+
+.checkInfo {
+  display: none;
+}
+
+/* ////////// */
+/* FOOTER  */
+/* /////////   */
+
+footer {
+  display: grid;
+  background-color: rgb(27, 26, 26);
+  .footer__irAlMenu {
+    font-family: "Mulish", sans-serif;
+    font-weight: bold;
+    margin: 5px 5px;
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    height: 25px;
+    text-align: center;
+    padding: 0px 4px;
+    padding-top: 0;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    
+    &:hover{
+      color: $verdeFluor;
+      transition: .2s;
+    }
+  }
+  .footer__title {
+    font-family: "Mallanna", sans-serif;
+    font-size: 2rem;
+    display: block;
+    margin: 10px 20px;
+    text-decoration: none;
+    color: rgb(255, 244, 228);
+  } 
+
+  //* BORDE QUE SEPARA EN EL FOOTER EL NAV 1 DEL NAV 2 */
+  .footer__div__border {
+    margin: 5px 10%;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 100%;
+  }
+  //* FORMULARIO DE CONTACTO */
+  .footer__form {
+    padding: 40px 10px;
+    color: #fff;
+    margin: auto;
+    .modal__contenedor__content__body__form-control  {
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px solid #3dffbc;
+      &:focus {
+        transition-property: background;
+        transition-duration: 0.5s;
+        outline: none;
+        outline-width: 0;
+        box-shadow: none;
+        -moz-box-shadow: none;
+        -webkit-box-shadow: none;
+        background-color: #3dffbc;
+        border: none;
+      }
+    }
+    .footer__form__botones {
+      text-align: end;
+      .footer__form__botones__item {
+        @extend %btn;
+      }
+    }
+  }
+  //* NAV 2 */
+  .footer__nav-2 {
+    color: rgb(255, 255, 255);
+    margin: 25px 10%;
+    i {
+      font-size: 22px;
+      color: #3dffbc;
+      &:hover {
+        animation-name: rotationY;
+        animation-duration: 0.8s;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+        animation-delay: 0.15s;
+      }
+    }
+    div {
+      a {
+        i {
+          font-size: 45px;
+        }
+      }
+    }
+  }
+  
+  //* CARTAS QUE PRESENTAN FORMAS DE CONTACTAR ABAJO DE TODO MUY VISIBLES */
+  .footer__contenedor{   
+    .footer__contenedor__cards {
+      display: flex;
+      flex-grow: 1;
+      flex-basis: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin: 30px 0px;          
+      .footer__contenedor__cards__card{
+        flex-grow: 1;
+        height: 100px;
+        border: 1px solid #3dffbc;
+        margin: 10px;
+        max-width: 400px;
+        background-color: transparent;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: .3s all ;
+        &:hover {
+          background: linear-gradient(to right, $verdeFluor-2, $verdeFluor);
+          transform: scale(1.05);
+          
+          .footer__contenedor__cards__card__item {
+            color: black;
+          }
+        }               
+        .footer__contenedor__cards__card__item {
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+          border: none;
+        }
+        i.footer__contenedor__cards__card__item{
+          margin-left: 50%;
+        }
+      }
+    }
+  }
+}
+
+
+  //*ANIMACIONES APLICADAS A LAS REDES SOCIALES EN EL FOOTER Y AL LOGO EN EL HEADER*/
+
+@keyframes rotationY {
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+
+
+@import "mediaq";

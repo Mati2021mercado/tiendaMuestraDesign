@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- TITULO KEYWORD Y DESCRIPCION -->
+
+    <title>Ofertas, computadoras usadas con rebajas y descuentos</title>
+    
+    <meta name="description" content="Que esperas, precios accesibles para computadoras usadas, repuestos, si no es lo que esperabas te devolvemos tu dinero.">
+
+    <meta name="keywords" content="precio computadora, computadora nueva, compu usadas, memoria,  computadora vieja, computadora barata, accesible, económica">
+
+    <!-- LINKS -->
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-uWxY/CJNBR+1zjPWmfnSnVxwRheevXITnMqoEIeG1LJrdI0GlVs/9cVSyPYXdcSF" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/normalize.css">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    
+</head>
+
+<body>
+    <header>
+        <div class="header__fixed">
+            
+            <div class="header__fixed__contenedor">
+                <a href="../index.html" class="header__fixed__contenedor__logo">
+                    <img src="../img/DIGG.png" alt="Logo Digg" />
+                </a>
+            </div>
+            <form class="header__fixed__searcher">
+                <input type="search" name="buscador" placeholder="Buscar..." autocomplete="off">
+                <a class="header__fixed__searcher__icon" href="#"><i class='bx bx-search'></i></a>
+            </form>
+            <div class="header__fixed__contenedor-icons">
+                <a href="#"> 
+                    <i class='bx bxs-cart'></i>
+                </a>
+                <a href="#" >
+                    <i class="fas fa-user"></i> 
+                </a>
+            </div>
+        </div>
+                    <!--              NAV                  -->
+        <nav>
+            <input type="checkbox"  id="check">
+                <label for="check"  class="checkbtn bs">
+                    <i class="fas fa-bars"></i>
+                </label> 
+            <ul class="list">
+                <li class="list__item">
+                    <a  href="../index.html">
+                        <i class='bx bxs-home'></i>
+                    </a>
+                    
+                    <a class="navbar__title" href="../index.html">
+                        Inicio
+                    </a>
+                </li>
+				<li class="list__item" >
+                    <a href="ofertas.html">
+                        <i class='bx bxs-message-square-detail'></i>
+                         
+                    </a>
+                    <a class="navbar__title" href="ofertas.html">
+                        
+                        Ofertas 
+                    </a>
+                </li>
+				<li class="list__item">
+                    <a href="novedades.html">
+                        <i class='bx bxs-cart'></i>
+                           
+                    </a>
+                    <a class="navbar__title" href="novedades.html">
+                        
+                        Novedades  
+                    </a>
+                </li>
+                <li class="list__item nav-item dropdown">
+                    <a  href="#">
+                        <i class='bx bx-plus'></i>
+                    </a>
+                    
+                    <a class="navbar__title dropdown-toggle">
+                        Mas
+                    </a>
+                    
+                    <ul class="list list--second  dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                        <li>
+                            <a class="list--second__item dropdown-item" href="nosotros.html">Nosotros</a>
+                        </li>
+                        <li>
+                            <a class=" list--second__item dropdown-item" href="politica.html">Politica</a>
+                        </li>
+                        <li>
+                            <a class=" list--second__item dropdown-item" href="vender.html">Vender</a>
+                        </li>
+                    </ul>
+                    
+                    
+                </li>
+                
+                <li class="list__item list__item__modal">
+                    <button type="button" class="btn btnRegistrarse" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Registrarse
+                      </button>
+                      
+
+                      <!-- MODAL CON BOOTSTRAP -->
+
+
+                      <div class="modal fade list__item__modal__contenedor" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+                        <div class="modal-dialog">
+
+                          <div class="modal-content list__item__modal__contenedor__content">
+
+                            <div class="modal-header modal__contenedor__content__header">
+
+                              <h5 class="modal-title modal__contenedor__content__header__title" id="exampleModalLabel">Registrarse</h5>
+                              
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                            </div>
+
+                            <!-- CONTENIDO DEL MODAL -->
+
+                            <div class="modal-body modal__contenedor__content__body">
+
+
+                                <!-- FORMULARIO DENTRO DEL MODAL -->
+
+
+                                <form class="modal__contenedor__content__body">
+
+
+                                    <div class="mb-3">
+
+                                        <label for="exampleInputEmail1" class="form-label">Email</label>
+                                        <input type="email" class="form-control modal__contenedor__content__body__form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.  </div>
+
+                                    </div>
+
+                                    <div class="mb-3">
+
+                                        <label for="exampleInputPassword1" class="form-label">Contraseña</label>
+                                        <input type="password" class="form-control modal__contenedor__content__body__form-control" id="exampleInputPassword1">
+
+                                    </div>
+
+                                    <div class="mb-3 form-check">
+
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Acepto terminos y condiciones</label>
+
+                                    </div>
+                    
+                                </form>
+
+                            </div>
+
+
+                            <div class="modal-footer modal__contenedor__content__footer">
+
+                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Cerrar</button>
+                              <button type="button" class="btn btn-primary">Registrarse</button>
+
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                </li>
+                <li class="list__item">
+                    <a href="#footer__form">
+                        <i class='bx bx-down-arrow-alt' ></i>
+                       
+                    </a>
+                    <a class="navbar__title" href="#footer__form">
+                        
+                        Contacto
+                    </a>
+                </li > 
+				<li class="list__item">
+                    <div class="form-check form-switch navbar__title">
+                        <label class="form-check-label " for="flexSwitchCheckChecked">Darkmode</label>
+                        <input class="form-check-input " type="checkbox" role="switch" id="flexSwitchCheckChecked" checked>
+                    </div>
+                </li>
+                          
+            </ul>
+
+        </nav>
+        <!-- DEBAJO DEL MENU EN EL CODIGO PERO ARRIBA DEL MENU SE ENCUENTRA LA PARTE FIXED, BUSCADOR, LOGO Y DEMAS ICONOS -->
+
+        <div class="header__fixed">
+            
+            <div class="header__fixed__contenedor">
+                <a href="../index.html" class="header__fixed__contenedor__logo">
+                    <img src="../img/DIGG.png" alt="Logo Digg" />
+                </a>
+            </div>
+            <form class="header__fixed__searcher">
+                <input type="search" name="buscador" placeholder="Buscar..." autocomplete="off">
+                <a class="header__fixed__searcher__icon" href="#"><i class='bx bx-search'></i></a>
+            </form>
+            <div class="header__fixed__contenedor-icons">
+                <a href="#"> 
+                    <i class='bx bxs-cart'></i>
+                </a>
+                <a href="#" >
+                    <i class="fas fa-user"></i> 
+                </a>
+            </div>
+        </div>
+
+
+    <h1 class="header__title">Encontra las mejores ofertas en computadoras.</h1> 
+
+
+
+    </header>
+    
+    <main class="ofertas">
+
+        <div class="ofertas__titulo">
+            <h4 >OFERTAS EXCLUSIVAS</h4>
+        </div>
+
+        <div class="ofertas__contenedor i1">
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto1.jpg" alt="">
+                <h6 >HP Laptop</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto8.jpg" alt="">
+                <h6 >LENOVO</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto7.jpg" alt="">
+                <h6 >Mac</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto6.jpg" alt="">
+                <h6 >Lenovo max</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto5.jpg" alt="">
+                <h6 >Lenovo ThinkPad</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto7.jpg" alt="">
+                <h6 >Alta pc</h6>
+            </div>  
+        </div>
+
+        <div class="ofertas__titulo">
+            <h4 >TAL VEZ TE INTERESE</h4>
+        </div>
+
+        <div class="ofertas__contenedor i2">
+
+           <div class="ofertas__contenedor__item">
+                <img src="../img/producto1.jpg" alt="">
+                <h6 >HP Laptop</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto8.jpg" alt="">
+                <h6 >LENOVO</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto7.jpg" alt="">
+                <h6 >Mac</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto6.jpg" alt="">
+                <h6 >Lenovo max</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto5.jpg" alt="">
+                <h6 >Lenovo ThinkPad</h6>
+            </div>
+            <div class="ofertas__contenedor__item">
+                <img src="../img/producto7.jpg" alt="">
+                <h6 >Alta pc</h6>
+            </div> 
+            
+        </div>
+
+        <div class="ofertas__titulo">
+        <h4 >POR QUE BUSCASTE:</h4>
+        </div>
+
+        <div class="ofertas__contenedor i3">
+
+            <div class="ofertas__contenedor__item">
+                 <img src="../img/producto1.jpg" alt="">
+                 <h6 >HP Laptop</h6>
+             </div>
+             <div class="ofertas__contenedor__item">
+                 <img src="../img/producto8.jpg" alt="">
+                 <h6 >LENOVO</h6>
+             </div>
+             <div class="ofertas__contenedor__item">
+                 <img src="../img/producto7.jpg" alt="">
+                 <h6 >Mac</h6>
+             </div>
+             <div class="ofertas__contenedor__item">
+                 <img src="../img/producto6.jpg" alt="">
+                 <h6 >Lenovo max</h6>
+             </div>
+             <div class="ofertas__contenedor__item">
+                 <img src="../img/producto5.jpg" alt="">
+                 <h6 >Lenovo ThinkPad</h6>
+             </div>
+             <div class="ofertas__contenedor__item">
+                 <img src="../img/producto7.jpg" alt="">
+                 <h6 >Alta pc</h6>
+             </div> 
+             
+         </div>
+
+        
+            
+       
+        </div>
+    </main>
+
+    <footer class="footer">
+        
+
+        <a class="footer__irAlMenu" href="#">
+            <i class='bx bx-up-arrow-alt'></i>
+            IR AL MENU
+        </a>
+        
+                    
+        <p class="footer__title">CONTACTANOS</p>
+
+                            
+
+         <!-- FORMULARIO DE CONTACTO                    -->
+
+
+
+        <form class="footer__form" id="footer__form">
+                    
+
+            <div class="mb-3" >
+                    
+                <label for="form__name" class="form-label">Name</label>
+
+                <input type="text" id="form__name" class="modal__contenedor__content__body__form-control form-control">
+
+            </div>
+                    
+
+            <div class="mb-3">
+
+                <label for="exampleInputEmail1" class="form-label">Email address
+                </label>
+                <input type="email" class="form-control modal__contenedor__content__body__form-control" id="exampleInputEmail1">
+                <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.                  
+                </div>
+
+            </div>
+
+            
+            <div class="mb-3">
+
+                <label for="textarea-form2"  class="form-label">Asunto</label>
+                <textarea id="textarea-form2" class="modal__contenedor__content__body__form-control form-control "></textarea>
+
+            </div>
+                               
+
+            <div class="mb-3 form-check">
+                
+                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1">Deseo recibir notificaciones 
+                </label>
+
+            </div>
+
+            
+            <div class="mb-3 footer__form__botones">
+
+                <button type="submit" class="btn btn-primary footer__form__botones__item">Enviar</button>
+                <button type="reset" class="btn btn-primary footer__form__botones__item">Borrar</button>
+
+            </div>
+
+
+        </form>
+                            
+                    
+        
+         <!--         NAV 1          -->
+                    
+                    
+
+        <div class="footer__nav footer__nav-1">
+            <ul class="nav justify-content-center" >
+                <li class="nav-item">
+                    <p href="#" class="nav-link px-2 text-muted">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">
+                                <i class='bx bxs-phone'></i>1142836859
+                            </font>
+                        </font>
+                    </p>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-muted">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Que somos
+                            </font>
+                        </font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-muted">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">Registrate
+                            </font>
+                        </font>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link px-2 text-muted">
+                        <font style="vertical-align: inherit;">
+                            <font style="vertical-align: inherit;">GitHub</font>
+                        </font>
+                    </a>
+                </li>
+            </ul>
+                                
+        </div>
+
+
+         <!-- BORDE QUE SEPARA EL NAV 1 DEL NAV 2                 -->
+                            
+
+
+        <div class="footer__div__border"></div>
+
+        
+
+         <!--        NAV 2        -->
+                    
+
+
+        <div class="footer__nav footer__nav-2
+         d-flex flex-wrap justify-content-between align-items-center">
+            <div class="col-md-4 d-flex align-items-center">
+                <a href="#" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+                    <i class='bx bxl-digg'></i>
+                </a>
+                <span class="text-muted">
+                    <font style="vertical-align: inherit;">
+                        <font class="" style="vertical-align: inherit;">© 2021 Digg compras
+                        </font>
+                    </font>
+                </span>
+            </div>
+                            
+            <ul class="nav  col-md-4 justify-content-end list-unstyled d-flex">
+                <li class="ms-3">
+                    <a class="text-muted" href="https://twitter.com/?lang=es">
+                        <i class='bx bxl-twitter'></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="https://www.linkedin.com/home/?originalSubdomain=ar"> 
+                        <i class='bx bxl-linkedin'></i>
+                    </a>
+                </li>
+                <li class="ms-3">
+                    <a class="text-muted" href="https://github.com/">
+                        <i class='bx bxl-github'></i>
+                    </a>
+                </li>
+            </ul>               
+        </div>
+
+
+        
+         <!--     CARTAS DE CONTACTO        -->
+
+
+
+        <div class="footer__contenedor">
+
+
+            <div class="footer__contenedor__cards row">
+
+
+                <div class="col-md-4 footer__contenedor__cards__card">
+
+                    <div>
+
+                        <i class="fas fa-phone-alt footer__contenedor__cards__card__item">
+                        </i>
+                        <a class="footer__contenedor__cards__card__item " href="tel:+541151390531">1151390531
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4 footer__contenedor__cards__card">
+
+                    <div>
+
+                        <i class="fas fa-map-marker-alt footer__contenedor__cards__card__item">
+                        </i>
+                        <p class="footer__contenedor__cards__card__item ">Tucuman 012, Ituzaingo, Cba.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4 footer__contenedor__cards__card">
+
+                    <div>
+
+                        <i class="fas fa-envelope footer__contenedor__cards__card__item">
+                        </i>
+                        <a href="#" class="footer__contenedor__cards__card__item ">matymercadoone@gmail.com
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    </footer>
+                        
+<script src="https://kit.fontawesome.com/62ea397d3a.js" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.min.js" integrity="sha384-PsUw7Xwds7x08Ew3exXhqzbhuEYmA2xnwc8BuD6SEr+UmEHlX8/MCltYEodzWA4u" crossorigin="anonymous"></script>                       
+
+</body>
+</html>
