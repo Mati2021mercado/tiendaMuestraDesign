@@ -17,6 +17,36 @@
 @import "pageNovedades";
 @import "pageNosotros";
 
+
+
+.list__item .navbar__title {
+
+	padding: 4px 0px;				
+	align-items: center;
+	position: relative;
+	
+}
+
+.list__item .navbar__title:before {
+
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	content: "";
+	border-bottom: 2px solid #fff;
+	border-radius: 2.5px;
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+		
+}
+
+.list__item .navbar__title:hover:before {
+	transform: scaleX(1);
+}
+
+
+
 // //////
 
 ::-webkit-scrollbar{
@@ -34,9 +64,9 @@
 body {
   background-color: #ebebeb;
   header {
-    background-color: #3dffbc;
+    background-color: $fondoNegro;
     .header__fixed {
-      background-color: #3dffbc;
+      background-color: $fondoNegro;
       /* background-color: #1fd294; */
     }
   }
@@ -64,13 +94,15 @@ button {
     display: flex;
     justify-content: flex-end;
     .header__fixed__contenedor__logo {
-      img {
+      
+      i {
         animation-name: rotationY;
         animation-duration: 2.5s;
         animation-iteration-count: infinite;
         animation-fill-mode: both;
         animation-timing-function: cubic-bezier(ease);
-        max-width: 90px;
+        font-size: 95px;
+        color: $icon-color;
         &:hover {
           transform: scale(1.1);
           transition: .3s;
@@ -83,7 +115,7 @@ button {
     flex-basis: 25%;
     justify-content: center;
     a {
-      color: black;
+      color: $icon-color;
       font-size: 43px;
       padding: 0px 10px;
       margin: 0px 10px;
@@ -226,11 +258,11 @@ nav {
     &:hover {
       a {
         i {
-          opacity: 0.5;
+          color: #fff;
         }
       }
       .navbar__title {
-        opacity: 0.5;
+        color: #fff;
       }
       //* ESTE ES UN ITEM DENTRO DEL TITULO "+ MAS" */
       .list--second {
@@ -258,15 +290,18 @@ nav {
       }
     }//* (TITULOS) a y boton regristrarse */
     a {
-      color: rgb(0, 0, 0);
+      color: $icon-color;
       font-size: 1.1rem;
       text-decoration: none;
       font-family: "Barlow", sans-serif;
       font-weight: 600;
       letter-spacing: 2px;
     }
+    div{
+      color:$icon-color;
+    }
     button {
-      background-color: rgb(0, 0, 0);
+      background-color: transparent;
       color: #3dffbc;
       font-size: 1.1rem;
       text-decoration: none;
@@ -325,6 +360,10 @@ main {
       }
     }
    } 
+  }
+  .div__columnasDeTexto{
+    background-color: $blanco;
+    
   }
   //* CONTENEDOR FLEXIBLE Y RESPONSIVO CON GRID */
   .contenedor__grid{
