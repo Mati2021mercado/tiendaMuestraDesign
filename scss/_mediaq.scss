@@ -84,11 +84,13 @@
         display: block;
         font-size: 21.5px;
         color: #3dffbc;
+        &:hover:before{
+          border-bottom: none;
+        }
       }
       .btnRegistrarse {
         font-size: 21.5px;
         color: #3dffbc;
-        
       }
     }
   }
