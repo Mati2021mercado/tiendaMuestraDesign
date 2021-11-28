@@ -59,7 +59,8 @@
         background-color: transparent;
       }
     }
-    .list__item {
+    .list__item,
+    .list__item.li {
       display: block;
       text-align: center;
       width: 100%;
@@ -156,7 +157,8 @@
   #checkp5:checked ~ .main__producto__informacion,
   #checkp6:checked ~ .main__producto__informacion,
   #checkp7:checked ~ .main__producto__informacion,
-  #checkp8:checked ~ .main__producto__informacion {
+  #checkp8:checked ~ .main__producto__informacion,
+  #checkp9:checked ~ .main__producto__informacion {
   z-index: 300;
   display: inherit;
   }

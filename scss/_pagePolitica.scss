@@ -1,0 +1,95 @@
+.main__politica{
+    background-color: $fondoBlanco;
+    .politica__seccion1{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        .div__imagen{
+            background-image: url("../img/politicaDeUsoFondo2.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+
+            height: 300px;
+            width: 100%; 
+           
+            
+        }
+        .seccion1__parrafo{
+            padding-top: 15px;
+            font-size: 1.3rem;
+            font-family: "Mallanna", sans-serif;
+            background-color: $blanco;
+            margin: 0;
+            padding: 20px;
+        }
+        
+    }
+    .politica__seccion2{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        
+        .div__imagen2{
+            background-image: url("../img/politicaDeUsoFondo3.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: bottom left;
+
+            height: 300px;
+            width: 100%; 
+            margin: 0;
+            
+        }
+        
+        .div__columnasDeTexto{
+            background-color: $blanco;
+            margin: 5px;
+            
+        }
+        .seccion2__parrafo{
+            padding-top: 15px;
+            font-size: 1.3rem;
+            font-family: "Mallanna", sans-serif;
+            background-color: $fondoNegro;
+            color: $blanco;
+            margin: 0;
+            padding: 20px;
+        }
+        
+    }
+    .politica__seccion3{
+        display: flex;
+        div{
+            margin: 0px;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width: 550px) {
+    .main__politica{
+        .politica__seccion2,
+        .politica__seccion1{
+        
+            .seccion2__parrafo,
+            .seccion1__parrafo{
+                font-size: 1.05rem;
+                padding: 4px;
+            }
+            .div__imagen2{
+                background-position: bottom center;
+            }
+            .div__imagen2{
+                background-position: bottom center;
+            }
+            
+        }
+        .politica__seccion3{
+            flex-direction: column;
+    
+        }
+    }
+    
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+.main__vender{
+    padding: 0;
+    margin: 0;
+    background-color: $fondoBlanco;
+    section{
+        width: 100%;
+        height: 600px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h2{
+            font-family: 'Roboto Mono', monospace;
+            
+        }
+    }
+}

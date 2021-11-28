@@ -9,6 +9,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Sarabun&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Armata&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap");
 main .contenedor__grid .contenedor__grid__producto .main__producto .main__producto__botones .main__producto__botones__comprar,
 main .contenedor__grid .contenedor__grid__producto .main__producto .main__producto__botones .main__producto__botones__carrito, footer .footer__form .footer__form__botones .footer__form__botones__item {
   background: linear-gradient(to right, #1fd294, #3dffbc);
@@ -166,9 +167,120 @@ main .contenedor__grid .contenedor__grid__producto .main__producto .main__produc
   .novedades__contenedor__lista .novedades__contenedor__lista__item a {
     flex-direction: column; } }
 
-.nosotros {
+.main_nosotros {
   padding: 0;
-  margin: 0; }
+  margin: 0;
+  background-color: black; }
+  .main_nosotros .seccion__imagenes .div__contenedor__images {
+    display: grid;
+    grid-template-columns: 600px 600px;
+    justify-content: center; }
+    .main_nosotros .seccion__imagenes .div__contenedor__images div {
+      background-color: black; }
+      .main_nosotros .seccion__imagenes .div__contenedor__images div img {
+        height: 100%;
+        object-fit: cover; }
+  .main_nosotros .seccion__parrafos {
+    margin: 0px 40px;
+    padding: 20px 0px; }
+    .main_nosotros .seccion__parrafos p {
+      padding: 6px 0px;
+      margin: 4px 0px;
+      text-align: center;
+      word-spacing: 4px;
+      font-size: 1.5rem;
+      font-family: "Armata", sans-serif; }
+    .main_nosotros .seccion__parrafos .parrafo__nosotros {
+      color: #fff;
+      background-color: #1b1a1a; }
+    .main_nosotros .seccion__parrafos .parrafo__nosotros--tipo2 {
+      color: #000;
+      background-color: #3dffbc; }
+
+@media only screen and (max-width: 600px) {
+  .main_nosotros .seccion__imagenes .div__contenedor__images {
+    grid-template-columns: 300px 300px; }
+  .main_nosotros .seccion__parrafos {
+    margin: 0px 20px; }
+    .main_nosotros .seccion__parrafos p {
+      font-size: 1rem; } }
+
+.main__vender {
+  padding: 0;
+  margin: 0;
+  background-color: #ebebeb; }
+  .main__vender section {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .main__vender section h2 {
+      font-family: 'Roboto Mono', monospace; }
+
+.main__politica {
+  background-color: #ebebeb; }
+  .main__politica .politica__seccion1 {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .main__politica .politica__seccion1 .div__imagen {
+      background-image: url("../img/politicaDeUsoFondo2.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      height: 300px;
+      width: 100%; }
+    .main__politica .politica__seccion1 .seccion1__parrafo {
+      padding-top: 15px;
+      font-size: 1.3rem;
+      font-family: "Mallanna", sans-serif;
+      background-color: #fff;
+      margin: 0;
+      padding: 20px; }
+  .main__politica .politica__seccion2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0; }
+    .main__politica .politica__seccion2 .div__imagen2 {
+      background-image: url("../img/politicaDeUsoFondo3.jpg");
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: bottom left;
+      height: 300px;
+      width: 100%;
+      margin: 0; }
+    .main__politica .politica__seccion2 .div__columnasDeTexto {
+      background-color: #fff;
+      margin: 5px; }
+    .main__politica .politica__seccion2 .seccion2__parrafo {
+      padding-top: 15px;
+      font-size: 1.3rem;
+      font-family: "Mallanna", sans-serif;
+      background-color: #1b1a1a;
+      color: #fff;
+      margin: 0;
+      padding: 20px; }
+  .main__politica .politica__seccion3 {
+    display: flex; }
+    .main__politica .politica__seccion3 div {
+      margin: 0px; }
+
+@media only screen and (max-width: 550px) {
+  .main__politica .politica__seccion2 .seccion2__parrafo,
+  .main__politica .politica__seccion2 .seccion1__parrafo,
+  .main__politica .politica__seccion1 .seccion2__parrafo,
+  .main__politica .politica__seccion1 .seccion1__parrafo {
+    font-size: 1.05rem;
+    padding: 4px; }
+  .main__politica .politica__seccion2 .div__imagen2,
+  .main__politica .politica__seccion1 .div__imagen2 {
+    background-position: bottom center; }
+  .main__politica .politica__seccion2 .div__imagen2,
+  .main__politica .politica__seccion1 .div__imagen2 {
+    background-position: bottom center; }
+  .main__politica .politica__seccion3 {
+    flex-direction: column; } }
 
 ::-webkit-scrollbar {
   width: 18px; }
@@ -326,47 +438,47 @@ nav {
               -webkit-box-shadow: none;
               background-color: #3dffbc;
               border: none; }
+  .list .list__item.li:hover a i {
+    color: #fff; }
+  .list .list__item.li:hover .navbar__title {
+    color: #fff;
+    padding: 4px 0px;
+    align-items: center;
+    position: relative; }
+    .list .list__item.li:hover .navbar__title::before {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      content: "";
+      border-bottom: 2px solid #fff;
+      border-radius: 2.5px;
+      transform: scaleX(0);
+      transform-origin: left center;
+      transition: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; }
+    .list .list__item.li:hover .navbar__title:hover:before {
+      transform: scaleX(1); }
+  .list .list__item.li:hover .list--second {
+    display: block;
+    padding: 15px 0px;
+    width: 200px;
+    background-color: #333;
+    position: absolute;
+    border-bottom-left-radius: 2px;
+    border-bottom-right-radius: 2px;
+    text-align: start; }
+    .list .list__item.li:hover .list--second li a {
+      display: block;
+      padding-left: 25px;
+      color: #fff;
+      font-family: "Niramit", sans-serif;
+      font-weight: 100;
+      letter-spacing: 1px; }
+      .list .list__item.li:hover .list--second li a:hover {
+        background-color: #3483fa; }
   .list .list__item {
     display: inline-block;
     position: relative;
     padding: 10px 15px; }
-    .list .list__item:hover a i {
-      color: #fff; }
-    .list .list__item:hover .navbar__title {
-      color: #fff;
-      padding: 4px 0px;
-      align-items: center;
-      position: relative; }
-      .list .list__item:hover .navbar__title::before {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        content: "";
-        border-bottom: 2px solid #fff;
-        border-radius: 2.5px;
-        transform: scaleX(0);
-        transform-origin: left center;
-        transition: 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s; }
-      .list .list__item:hover .navbar__title:hover:before {
-        transform: scaleX(1); }
-    .list .list__item:hover .list--second {
-      display: block;
-      padding: 15px 0px;
-      width: 200px;
-      background-color: #333;
-      position: absolute;
-      border-bottom-left-radius: 2px;
-      border-bottom-right-radius: 2px;
-      text-align: start; }
-      .list .list__item:hover .list--second li a {
-        display: block;
-        padding-left: 25px;
-        color: #fff;
-        font-family: "Niramit", sans-serif;
-        font-weight: 100;
-        letter-spacing: 1px; }
-        .list .list__item:hover .list--second li a:hover {
-          background-color: #3483fa; }
     .list .list__item a {
       color: #3dffbc;
       font-size: 1.1rem;
@@ -418,11 +530,6 @@ main {
   main .carousel .carousel-inner .carousel-item img {
     min-height: 175px;
     object-fit: cover; }
-  main .div__columnasDeTexto {
-    background-color: #fff;
-    display: flex;
-    justify-content: center;
-    margin-top: 200px; }
   main .contenedor__grid {
     margin: 20px 20px; }
     main .contenedor__grid .contenedor__grid__producto {
@@ -547,7 +654,8 @@ main {
 #checkp5,
 #checkp6,
 #checkp7,
-#checkp8 {
+#checkp8,
+#checkp9 {
   display: none; }
 
 .checkInfo {
@@ -689,25 +797,32 @@ footer {
     position: relative; }
     .list .list__item__modal .btnRegistrarse {
       background-color: transparent; }
-    .list .list__item {
+    .list .list__item,
+    .list .list__item.li {
       display: block;
       text-align: center;
       width: 100%;
       padding: 0px;
       line-height: 45px; }
-      .list .list__item:hover .list--second {
+      .list .list__item:hover .list--second,
+      .list .list__item.li:hover .list--second {
         width: 100%; }
-        .list .list__item:hover .list--second li a {
+        .list .list__item:hover .list--second li a,
+        .list .list__item.li:hover .list--second li a {
           font-size: 1.2rem; }
-      .list .list__item a i {
+      .list .list__item a i,
+      .list .list__item.li a i {
         display: none; }
-      .list .list__item .navbar__title {
+      .list .list__item .navbar__title,
+      .list .list__item.li .navbar__title {
         display: block;
         font-size: 21.5px;
         color: #3dffbc; }
-        .list .list__item .navbar__title:hover:before {
+        .list .list__item .navbar__title:hover:before,
+        .list .list__item.li .navbar__title:hover:before {
           border-bottom: none; }
-      .list .list__item .btnRegistrarse {
+      .list .list__item .btnRegistrarse,
+      .list .list__item.li .btnRegistrarse {
         font-size: 21.5px;
         color: #3dffbc; }
   .form-check.form-switch.navbar__title {
@@ -751,6 +866,7 @@ footer {
   #checkp5:checked ~ .main__producto__informacion,
   #checkp6:checked ~ .main__producto__informacion,
   #checkp7:checked ~ .main__producto__informacion,
-  #checkp8:checked ~ .main__producto__informacion {
+  #checkp8:checked ~ .main__producto__informacion,
+  #checkp9:checked ~ .main__producto__informacion {
     z-index: 300;
     display: inherit; } }

@@ -1,14 +1,14 @@
 {
-  "name": "clase12",
+  "name": "tienda-de-compras",
   "version": "1.0.0",
-  "description": "",
+  "description": "desarrollo web de compra y ventas de computadoras",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build-css": "node-sass --include-path scss scss/style.scss css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
-  "author": "",
+  "author": "Matias Mercado",
   "license": "ISC",
   "devDependencies": {
     "node-sass": "^6.0.1",

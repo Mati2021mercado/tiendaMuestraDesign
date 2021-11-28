@@ -16,6 +16,8 @@
 @import "pageOfertas";
 @import "pageNovedades";
 @import "pageNosotros";
+@import "pageVender";
+@import "pagePolitica";
 
 
 
@@ -222,11 +224,8 @@ nav {
       }
     }
   }
-  //* ESTOS SON LOS ITEM NORMALES */
-  .list__item {
-    display: inline-block;
-    position: relative;
-    padding: 10px 15px;
+  //* ESTOS SON LOS ITEM NORMALES */ 
+  .list__item.li{
     &:hover {
       a {
         i {
@@ -278,7 +277,13 @@ nav {
           }
         }
       }
-    }//* (TITULOS) a y boton regristrarse */
+    }
+  }
+  .list__item {
+    display: inline-block;
+    position: relative;
+    padding: 10px 15px;
+    //* (TITULOS) a y boton regristrarse */
     a {
       color: $icon-color;
       font-size: 1.1rem;
@@ -350,14 +355,7 @@ main {
     }
    } 
   }
-  .div__columnasDeTexto{
-    background-color: $blanco;
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-    
-    
-  }
+  
   //* CONTENEDOR FLEXIBLE Y RESPONSIVO CON GRID */
   .contenedor__grid{
     margin: 20px 20px;
@@ -512,7 +510,8 @@ main {
 #checkp5,
 #checkp6,
 #checkp7,
-#checkp8 {
+#checkp8,
+#checkp9 {
   display: none;
 }
 
